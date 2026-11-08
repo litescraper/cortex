@@ -7,6 +7,11 @@ Versioning: [Semantic Versioning](https://semver.org/)
 
 ## [Unreleased]
 
+### Added
+
+- Optional native `litescrape_search` tool with provider-specific credentials,
+  Google web snippets and existing network-policy checks.
+
 ### Fixed
 
 - **MCP gateway audit + approvals lost on restart** — `logAudit()`, `createApproval()`,

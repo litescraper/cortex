@@ -95,12 +95,15 @@ export async function validateToolCall(
     'brave_search',
     'tavily_search',
     'serpapi_search',
+    'litescrape_search',
   ]);
   if (WEB_TOOLS.has(toolName)) {
     let url = '';
     if (
       toolName === 'web_search' || toolName === 'web_search_enhanced' ||
-      toolName === 'brave_search' || toolName === 'tavily_search' || toolName === 'serpapi_search'
+      toolName === 'brave_search' || toolName === 'tavily_search' ||
+      toolName === 'serpapi_search' ||
+      toolName === 'litescrape_search'
     ) {
       url = String(args.query ?? '');
     } else if (
@@ -399,12 +402,15 @@ export async function validateNodeDirective(
     'brave_search',
     'tavily_search',
     'serpapi_search',
+    'litescrape_search',
   ]);
   if (WEB_TOOLS_NODE.has(toolName)) {
     let url = '';
     if (
       toolName === 'web_search' || toolName === 'web_search_enhanced' ||
-      toolName === 'brave_search' || toolName === 'tavily_search' || toolName === 'serpapi_search'
+      toolName === 'brave_search' || toolName === 'tavily_search' ||
+      toolName === 'serpapi_search' ||
+      toolName === 'litescrape_search'
     ) {
       url = String(args.query ?? '');
     } else {

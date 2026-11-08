@@ -39,6 +39,7 @@ import { webFetchTool } from './builtin/web_fetch.ts';
 import { braveSearchTool } from './builtin/web/brave_search.ts';
 import { tavilySearchTool } from './builtin/web/tavily_search.ts';
 import { serpapiSearchTool } from './builtin/web/serpapi_search.ts';
+import { litescrapeSearchTool } from './builtin/web/litescrape_search.ts';
 import { firecrawlTool } from './builtin/web/firecrawl.ts';
 import { computerTool } from './builtin/computer.ts';
 import { mcpAgentTool } from './builtin/mcp_agent.ts';
@@ -220,6 +221,7 @@ export async function registerAllBuiltins(
     brave_search: braveSearchTool,
     tavily_search: tavilySearchTool,
     serpapi_search: serpapiSearchTool,
+    litescrape_search: litescrapeSearchTool,
     firecrawl: firecrawlTool,
     docs_search: docsSearchTool,
   };
