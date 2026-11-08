@@ -7,6 +7,11 @@ Versioning: [Semantic Versioning](https://semver.org/)
 
 ## [Unreleased]
 
+### Added
+
+- Optional `serper_search` tool with provider-specific credentials, configurable
+  Serper-compatible endpoints, web snippets and existing network-policy checks.
+
 ### Fixed
 
 - **MCP gateway audit + approvals lost on restart** — `logAudit()`, `createApproval()`,

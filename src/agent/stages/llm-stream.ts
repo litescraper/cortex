@@ -73,6 +73,7 @@ export async function runLLMStream(ctx: TurnContext): Promise<void> {
     'tavily_search',
     'web_fetch',
     'serpapi_search',
+    'serper_search',
   ]);
   let consecutiveSearchRounds = 0;
   const recentAssistantOutputs: string[] = [];

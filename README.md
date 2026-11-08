@@ -164,6 +164,21 @@ See [docs/SKILLS.md](docs/SKILLS.md) for the full reference.
 | Code Intelligence | code_index, code_search_symbol, code_trace_path, code_analyze_impact, code_get_architecture     |
 | Computer Use      | screenshot, left_click, type, key, scroll, mouse_move, drag (GUI automation via Xvfb + xdotool) |
 
+### Optional Serper-compatible Search
+
+The `serper_search` tool returns Google web titles, URLs and snippets. Configure
+`SERPER_API_KEY` or vault entry `serper_api_key`; `SERPER_BASE_URL` defaults to
+`https://google.serper.dev` and must omit `/search`.
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others).
+
+`max_results` is clamped to 1–10. The endpoint is operator configuration, never a
+tool argument. The tool uses the existing outbound SSRF check and refuses redirects;
+private/internal endpoints are blocked. Existing search tools and credentials are
+unchanged. Results are not full pages, Scholar records or citation metadata.
+`SERPER_TIMEOUT_MS` configures the request timeout (default `20000`); for example,
+set it to `90000` for an endpoint that needs up to 90 seconds. Invalid values use
+the default. This setting affects only the new tool.
+
 ### Web UI & REST API
 
 - **Built-in HTTP server** — `cortex server start` starts a WebSocket-powered chat UI on port 3000
